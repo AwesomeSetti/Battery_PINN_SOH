@@ -23,7 +23,7 @@ val_conditions = params["val_conditions"]
 print("Validation conditions:", val_conditions)
 
 # ---------- FIG 1: SOH vs cycle overlay for a few validation trajectories ----------
-# pick up to 4 trajectories with worst RMSE so we show challenging cases (more convincing)
+
 metrics_sorted = metrics.sort_values("rmse", ascending=False)
 traj_pick = metrics_sorted["traj_id"].head(4).tolist()
 
