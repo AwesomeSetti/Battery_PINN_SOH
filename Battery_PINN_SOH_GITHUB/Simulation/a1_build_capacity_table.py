@@ -2,7 +2,7 @@ import os, glob, re
 import pandas as pd
 import numpy as np
 
-# CHANGE THIS PATH to your folder on Mac:
+
 PROCESSED_DIR = "/Users/setti/Desktop/Battery_PINN_SOH/Extension/CALCE_processed_fixed3"
 OUT_CSV = "data_processed/capacity_table.csv"
 
