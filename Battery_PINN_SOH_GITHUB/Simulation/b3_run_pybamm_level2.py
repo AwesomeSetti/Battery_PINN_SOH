@@ -26,7 +26,7 @@ def run_one(protocol_csv, temperature="25 oC", n_cycles=3, initial_soc=0.2):
         solver=solver
     )
 
-    # 🔑 Critical fix: force physically consistent initial SOC
+
     sol = sim.solve(initial_soc=initial_soc)
 
     return sol, cycle_steps
