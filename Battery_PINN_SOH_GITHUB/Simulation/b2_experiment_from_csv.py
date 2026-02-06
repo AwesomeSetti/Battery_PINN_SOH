@@ -3,7 +3,7 @@ import pybamm
 
 def build_steps_from_cycle1_csv(csv_path: str):
     """
-    Convert your cycle-1 step summary CSV into PyBaMM experiment step strings.
+    Convert our cycle-1 step summary CSV into PyBaMM experiment step strings.
     Uses current in A (not C-rate) to avoid needing nominal capacity.
     """
     df = pd.read_csv(csv_path)
