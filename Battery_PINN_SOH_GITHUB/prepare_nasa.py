@@ -7,7 +7,7 @@ from scipy.io import loadmat
 from scipy.stats import kurtosis, skew
 
 
-# NASA README discharge cutoff voltages (you can verify in your README)
+
 V_MIN_BY_BATT = {"B0005": 2.7, "B0006": 2.5, "B0007": 2.2, "B0018": 2.5}
 
 
