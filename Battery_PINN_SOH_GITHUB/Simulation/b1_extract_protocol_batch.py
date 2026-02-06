@@ -3,9 +3,7 @@ import glob
 import pandas as pd
 import numpy as np
 
-# EDIT THIS PATH to your folder that contains the xlsx files you want to scan
-# Example:
-# RAW_DIR = "/Users/setti/Desktop/Battery_PINN_SOH/Calce data/Continuous Cycling Data/001~050 Cycles"
+
 RAW_DIR = r"/Users/setti/Desktop/Battery_PINN_SOH/Extension/Calce data/Continuous Cycling Data/001~050 Cycles"
 
 OUT_DIR = "protocol_summaries"
