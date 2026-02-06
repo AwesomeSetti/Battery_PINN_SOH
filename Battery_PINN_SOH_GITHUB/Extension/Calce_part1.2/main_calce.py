@@ -1,15 +1,3 @@
-"""
-main_calce.py
-
-Run the paper-style PINN training loop on **processed CALCE per-condition CSVs**.
-
-Key upgrades (for your professor’s "generalization across temperature/protocol"):
-1) Loads ALL CSV files in --root (e.g., CALCE_processed_fixed3/)
-2) Supports HELD-OUT splits by filename tag:
-     --test_temp_tag T45C   (tests on all files whose names contain "T45C_")
-   This is the correct evaluation for "unseen temperature".
-3) Keeps --test_ratio as a fallback split mode (file-level random split).
-"""
 
 from __future__ import annotations
 
@@ -30,15 +18,7 @@ os.environ.setdefault("CUDA_VISIBLE_DEVICES", "0")
 
 
 class CalceData(DF):
-    """
-    CALCE dataset wrapper.
-    Uses the same CSV reading + pairing logic as DF.
 
-    IMPORTANT:
-    - Your processed CALCE CSVs already have capacity normalized per (temp, condition) group.
-      So we set nominal_capacity=1.0 => y stays unchanged (still called "capacity" column),
-      while DF can still normalize X features if enabled.
-    """
 
     def __init__(self, root: str, args: argparse.Namespace):
         super().__init__(args)
